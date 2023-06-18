@@ -39,5 +39,23 @@
         android:text="android"
         android:textSize="@dimen/_40sdp"
         android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="android"
+        android:textSize="@dimen/_40sdp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="android"
+        android:textSize="@dimen/_40sdp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="android"
+        android:textSize="@dimen/_40sdp"
+        android:gravity="center"/>
 
 </LinearLayout>
