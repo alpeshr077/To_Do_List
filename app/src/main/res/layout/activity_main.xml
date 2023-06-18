@@ -49,20 +49,11 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="@dimen/_44sdp"
-            android:layout_height="wrap_content"
-            android:text="Sort"
-            android:layout_marginLeft="@dimen/_16sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/sort_border"
-            android:padding="@dimen/_6sdp"
-            android:gravity="center"/>
-
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
