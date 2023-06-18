@@ -9,10 +9,5 @@
         android:layout_height="wrap_content"
         android:text="Data Science"
         android:textSize="@dimen/_44sdp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Data Science"
-        android:textSize="@dimen/_44sdp"/>
 
 </LinearLayout>
