@@ -5,12 +5,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_50sdp"
+        android:layout_height="@dimen/_60sdp"
         android:layout_margin="@dimen/_16sdp"
         android:background="@drawable/item_design"
         android:orientation="horizontal">
 
         <CheckBox
+            android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_5sdp" />
@@ -23,6 +24,7 @@
             android:layout_weight="9">
 
             <TextView
+                android:id="@+id/setData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Data Submit"
@@ -31,15 +33,24 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/setDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data Submit"
+                android:text="10-01-2012"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"/>
+            <TextView
+                android:id="@+id/setTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:25:AM"
                 android:textColor="@color/black"
                 android:textSize="@dimen/_10sdp"/>
 
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/rateStar"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginLeft="@dimen/_5sdp"
@@ -48,6 +59,7 @@
             android:layout_marginRight="@dimen/_16sdp"/>
 
         <ImageView
+            android:id="@+id/dataOption"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginLeft="@dimen/_5sdp"
