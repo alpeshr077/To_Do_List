@@ -59,9 +59,4 @@ class new_task_add : AppCompatActivity() {
 
 
     }
-
-
-
-
-
 }
