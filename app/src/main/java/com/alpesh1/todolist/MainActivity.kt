@@ -8,14 +8,18 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import com.alpesh1.todolist.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var binding: ActivityMainBinding
 
     var category = arrayOf("Time Management","Calling","Work","Personal","Shopping","Wishlist")
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val spinner = findViewById<Spinner>(R.id.spinner)
         val arrayAdapter = ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,category)
