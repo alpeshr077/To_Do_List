@@ -57,7 +57,7 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
             var month = cursor.getInt(3)
             var year = cursor.getInt(4)
 
-            var model = TaskModel(id,addtask,date,month,year)
+            var model = TaskModel(id,addtask, date.toString(), month.toString(), year.toString())
 
             tasklist.add(model)
             cursor.moveToNext()
