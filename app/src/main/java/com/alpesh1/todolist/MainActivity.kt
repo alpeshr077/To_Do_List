@@ -25,8 +25,11 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val menu = null
+        menuInflater.inflate(R.menu.menu1,menu)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         dbHelper = DBHelper(this)
         adapter = TaskAdapter()
@@ -42,6 +45,11 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerTask.layoutManager = LinearLayoutManager(this)
         binding.recyclerTask.adapter = adapter
 
+        binding.optionMenu.setOnClickListener {
+
+
+        }
 
     }
+
 }
