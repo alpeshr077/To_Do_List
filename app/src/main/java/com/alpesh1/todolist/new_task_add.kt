@@ -43,9 +43,9 @@ class new_task_add : AppCompatActivity() {
                 DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
                     override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
 
-                        var Year = p1
-                        var Month = p2 + 1
-                        var Date = p3
+                        var year = p1
+                        var month = p2 + 1
+                        var date = p3
 
                         var selectedDate = "$p3-${(p2 + 1)}-$p1"
                         binding.edtsetDate.setText(selectedDate)

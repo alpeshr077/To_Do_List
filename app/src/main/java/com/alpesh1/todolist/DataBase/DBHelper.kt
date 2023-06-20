@@ -2,6 +2,7 @@ package com.alpesh1.todolist.DataBase
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.LocusId
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.alpesh1.todolist.ModelClass.TaskModel
@@ -71,6 +72,26 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
             cursor.moveToNext()
         }
         return tasklist
+    }
+
+    fun updateTask(taskModel: TaskModel){
+
+        var db = writableDatabase
+        var values = ContentValues().apply {
+            taskModel.apply {
+                put(ADDTASK,addtask)
+                put(DATE,date)
+                put(MONTH,month)
+                put(YEAR,year)
+                put(MINUTE,minute)
+                put(HOUR,hour)
+            }
+        }
+        db.update(TABLE_NAME,values,"id=${taskModel.id}",null)
+    }
+    fun deleteTask(id:Int){
+        var db = writableDatabase
+        db.delete(TABLE_NAME,"id=$id",null)
     }
 
 }
