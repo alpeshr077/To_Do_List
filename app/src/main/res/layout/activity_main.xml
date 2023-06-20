@@ -58,7 +58,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/addbtn"
         android:layout_width="@dimen/_44sdp"
         android:layout_height="@dimen/_44sdp"
         android:layout_alignParentRight="true"
