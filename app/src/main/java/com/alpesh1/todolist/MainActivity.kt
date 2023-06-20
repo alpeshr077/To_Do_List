@@ -24,10 +24,9 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.addbtn.setOnClickListener {
-          var  intent=Intent(this,new_task_add::class.java)
+            var  intent=Intent(this,new_task_add::class.java)
             startActivity(intent)
         }
-
 
     }
 }
