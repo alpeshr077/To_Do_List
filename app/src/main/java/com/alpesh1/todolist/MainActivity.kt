@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter.settask(tasklist)
+        adapter.updatetask(tasklist)
 
         binding.recyclerTask.layoutManager = LinearLayoutManager(this)
         binding.recyclerTask.adapter = adapter
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
 
         }
+
 
     }
 

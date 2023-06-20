@@ -54,7 +54,7 @@
             android:id="@+id/recyclerTask"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_16sdp"/>
+            android:layout_margin="@dimen/_8sdp"/>
 
 
     </LinearLayout>
