@@ -41,5 +41,9 @@ class TaskAdapter : RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
         this.tasklist = tasklist
     }
 
+    fun updatetask(tasklist: java.util.ArrayList<TaskModel>) {
+        this.tasklist = tasklist
+        notifyDataSetChanged()
+    }
 
 }
