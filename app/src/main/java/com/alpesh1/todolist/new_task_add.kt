@@ -3,10 +3,10 @@ package com.alpesh1.todolist
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.DatePicker
 import android.widget.TimePicker
+import androidx.appcompat.app.AppCompatActivity
 import com.alpesh1.todolist.DataBase.DBHelper
 import com.alpesh1.todolist.ModelClass.TaskModel
 import com.alpesh1.todolist.databinding.ActivityNewTaskAddBinding
@@ -79,8 +79,6 @@ class new_task_add : AppCompatActivity() {
         }
 
 
-
-
 //        binding.edtSetDate.setOnClickListener {
 //
 //            val c = Calendar.getInstance()
@@ -108,7 +106,7 @@ class new_task_add : AppCompatActivity() {
 //            datePickerDialog.show()
 //        }
         binding.BackArrow.setOnClickListener {
-            var  intent=Intent(this,MainActivity::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
         }
@@ -118,11 +116,16 @@ class new_task_add : AppCompatActivity() {
             var date = binding.edtsetDate.text.toString()
             var month = binding.edtsetDate.text.toString()
             var year = binding.edtsetDate.text.toString()
-            val model = TaskModel(1,addtask,date,month,year)
+            var minute = binding.edtsetTime.text.toString()
+            var hour = binding.edtsetTime.text.toString()
+
+            val model = TaskModel(1, addtask, date, month, year, minute, hour)
 
             dbHelper.addTask(model)
 
             binding.addtask.setText("")
+            binding.edtsetDate.setText("")
+            binding.edtsetTime.setText("")
 
         }
     }

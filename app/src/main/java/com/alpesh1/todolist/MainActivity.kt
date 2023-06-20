@@ -1,12 +1,17 @@
 package com.alpesh1.todolist
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface.OnClickListener
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.ImageView
+import android.widget.PopupMenu
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +19,8 @@ import com.alpesh1.todolist.Adapter.TaskAdapter
 import com.alpesh1.todolist.DataBase.DBHelper
 import com.alpesh1.todolist.ModelClass.TaskModel
 import com.alpesh1.todolist.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,11 +32,8 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val menu = null
-        menuInflater.inflate(R.menu.menu1,menu)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         dbHelper = DBHelper(this)
         adapter = TaskAdapter()
@@ -41,16 +45,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         adapter.settask(tasklist)
-        adapter.updatetask(tasklist)
 
         binding.recyclerTask.layoutManager = LinearLayoutManager(this)
         binding.recyclerTask.adapter = adapter
-
-        binding.optionMenu.setOnClickListener {
-
-
-        }
-
 
     }
 

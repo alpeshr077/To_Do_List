@@ -14,11 +14,14 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
     var DATE = "date"
     var MONTH = "month"
     var YEAR = "year"
+    var TIME = "time"
+    var MINUTE = "minute"
+    var HOUR = "hour"
 
 
     override fun onCreate(p0: SQLiteDatabase?) {
 
-        var que = "CREATE TABLE $TABLE_NAME($ID INTEGER PRIMARY KEY AUTOINCREMENT,$ADDTASK TEXT,$DATE TEXT, $MONTH TEXT, $YEAR TEXT)"
+        var que = "CREATE TABLE $TABLE_NAME($ID INTEGER PRIMARY KEY AUTOINCREMENT,$ADDTASK TEXT,$DATE TEXT, $MONTH TEXT, $YEAR TEXT,$MINUTE TEXT,$HOUR TEXT)"
 
         p0?.execSQL(que)
 
@@ -38,6 +41,9 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
                 put(DATE,date)
                 put(MONTH,month)
                 put(YEAR,year)
+                put(MINUTE,minute)
+                put(HOUR,hour)
+
             }
         }
         db.insert(TABLE_NAME,null,values)
@@ -56,8 +62,10 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
             var date = cursor.getInt(2)
             var month = cursor.getInt(3)
             var year = cursor.getInt(4)
+            var minute = cursor.getInt(5)
+            var hour = cursor.getInt(6)
 
-            var model = TaskModel(id,addtask, date.toString(), month.toString(), year.toString())
+            var model = TaskModel(id,addtask, date.toString(), month.toString(), year.toString(),minute.toString(),hour.toString())
 
             tasklist.add(model)
             cursor.moveToNext()

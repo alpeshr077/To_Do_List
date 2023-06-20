@@ -20,7 +20,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="#45A3DD">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -38,14 +39,6 @@
                     android:background="@null"
                     android:hint="Search Task" />
 
-                <ImageView
-                    android:id="@+id/optionMenu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_16sdp"
-                    android:layout_marginRight="@dimen/_16sdp"
-                    android:src="@drawable/baseline_more_vert_24" />
-
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -54,8 +47,7 @@
             android:id="@+id/recyclerTask"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/_8sdp"/>
-
+            android:layout_margin="@dimen/_5sdp"/>
 
     </LinearLayout>
 
@@ -69,7 +61,7 @@
         android:layout_marginTop="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_16sdp"
-        android:background="@drawable/round_button"
+        android:background="@drawable/button_design"
         android:gravity="center">
 
         <ImageView

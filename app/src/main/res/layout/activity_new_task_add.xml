@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".new_task_add">
-
+    tools:context=".new_task_add"
+    android:background="@color/white">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -15,7 +15,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#45A3DD">
 
             <ImageView
                 android:id="@+id/BackArrow"
@@ -32,9 +33,10 @@
                 android:layout_marginTop="@dimen/_16sdp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:fontFamily="@font/roboto_slab_bold"
                 android:text="New Task"
-                android:textSize="@dimen/_14sdp" />
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -52,8 +54,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/robotoslab_extrabold"
-            android:text="What is to be done?" />
+            android:text="What is to be done?"
+            android:textSize="@dimen/_16sdp"/>
 
         <EditText
             android:id="@+id/addtask"
@@ -68,8 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/robotoslab_extrabold"
-            android:text="Due Date" />
+            android:text="Due Date"
+            android:textSize="@dimen/_16sdp"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -80,11 +82,11 @@
                 android:id="@+id/edtsetDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_16sdp"
+                android:layout_marginRight="@dimen/_16sdp"
                 android:clickable="false"
                 android:cursorVisible="false"
                 android:focusableInTouchMode="false"
-                android:layout_marginLeft="@dimen/_16sdp"
-                android:layout_marginRight="@dimen/_16sdp"
                 android:hint="Set Date" />
 
             <ImageView
@@ -128,8 +130,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_16sdp"
-            android:fontFamily="@font/robotoslab_extrabold"
-            android:text="Add Category" />
+            android:text="Add Category"
+            android:textSize="@dimen/_16sdp"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -149,13 +151,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/button_design"
-        android:fontFamily="@font/roboto_slab_bold"
         android:gravity="center"
         android:text="Submit"
         android:ems="6"
         android:textColor="@color/white"
         android:textSize="@dimen/_14sdp" />
-
-
 
 </LinearLayout>

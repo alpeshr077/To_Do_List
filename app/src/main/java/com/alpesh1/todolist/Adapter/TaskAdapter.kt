@@ -33,17 +33,17 @@ class TaskAdapter : RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
        holder.binding.apply {
            tasklist.get(position).apply {
                setData.text = addtask
+               setDate.text = date
+               setDate.text = month
+               setDate.text = year
+               setTime.text = minute
+               setTime.text = hour
            }
        }
     }
 
     fun settask(tasklist:ArrayList<TaskModel>) {
         this.tasklist = tasklist
-    }
-
-    fun updatetask(tasklist: java.util.ArrayList<TaskModel>) {
-        this.tasklist = tasklist
-        notifyDataSetChanged()
     }
 
 }
