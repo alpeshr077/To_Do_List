@@ -3,13 +3,21 @@ package com.alpesh1.todolist.Adapter
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.View.OnLongClickListener
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.alpesh1.todolist.ModelClass.TaskModel
+import com.alpesh1.todolist.R
 import com.alpesh1.todolist.databinding.StoreDataItemBinding
 
-class TaskAdapter : RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
+class TaskAdapter(update:(TaskModel) -> Unit,delete:(Int) -> Unit) : RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
+
+    var update = update
+    var delete = delete
 
     lateinit var context: Context
 
@@ -40,10 +48,47 @@ class TaskAdapter : RecyclerView.Adapter<TaskAdapter.TaskHolder>() {
                setTime.text = hour
            }
        }
+
+        holder.itemView.setOnLongClickListener(object : OnLongClickListener{
+            override fun onLongClick(p0: View?): Boolean {
+
+                var popupMenu = PopupMenu(context,holder.itemView)
+                popupMenu.menuInflater.inflate(R.menu.menu1,popupMenu.menu)
+
+                popupMenu.setOnMenuItemClickListener(object : PopupMenu.OnMenuItemClickListener{
+                    override fun onMenuItemClick(p0: MenuItem?): Boolean {
+
+                        if (p0?.itemId==R.id.edit){
+
+                            update.invoke(tasklist.get(position))
+                        }
+                        if (p0?.itemId==R.id.delete){
+
+                            delete.invoke(tasklist.get(position).id)
+                        }
+
+                        return true
+                    }
+
+                } )
+
+                popupMenu.show()
+
+                return true
+
+            }
+
+        })
+
     }
 
     fun settask(tasklist:ArrayList<TaskModel>) {
         this.tasklist = tasklist
+    }
+
+    fun updateData(gettask:ArrayList<TaskModel>) {
+        tasklist = gettask
+        notifyDataSetChanged()
     }
 
 }
