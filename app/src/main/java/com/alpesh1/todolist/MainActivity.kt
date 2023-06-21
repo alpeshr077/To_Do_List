@@ -61,15 +61,8 @@ class MainActivity : AppCompatActivity() {
 
                     dbHelper.deleteTask(it)
 
-                    try {
-
                         adapter.updateData(
-                            dbHelper.gettask().reversed() as java.util.ArrayList<TaskModel>
-                        )
-
-                    } catch (e: Exception) {
-
-                    }
+                            dbHelper.gettask().reversed() as java.util.ArrayList<TaskModel>)
                 }
 
             }).setNegativeButton("No", object : DialogInterface.OnClickListener {
@@ -78,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }).create()
+        dialog.show()
         dialog.dismiss()
 
     }
@@ -107,7 +101,7 @@ class MainActivity : AppCompatActivity() {
 
             dbHelper.updateTask(model)
             dialog.dismiss()
-//            adapter.updateData(dbHelper.gettask().reversed() as java.util.ArrayList<TaskModel>)
+            adapter.updateData(dbHelper.gettask().reversed() as java.util.ArrayList<TaskModel>)
 
             bind.addtask.setText("")
             bind.edtsetDate.setText("")
