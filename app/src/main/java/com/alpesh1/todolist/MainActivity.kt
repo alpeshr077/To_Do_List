@@ -1,26 +1,17 @@
 package com.alpesh1.todolist
 
 import android.annotation.SuppressLint
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Intent
-import android.content.DialogInterface.OnClickListener
-import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.PopupMenu
-import android.widget.Spinner
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alpesh1.todolist.Adapter.TaskAdapter
 import com.alpesh1.todolist.DataBase.DBHelper
 import com.alpesh1.todolist.ModelClass.TaskModel
 import com.alpesh1.todolist.databinding.ActivityMainBinding
-import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         adapter = TaskAdapter()
         tasklist = dbHelper.gettask()
 
-        binding.addbutton.setOnClickListener {
+        binding.addbtn.setOnClickListener {
             var intent = Intent(this,new_task_add::class.java)
             startActivity(intent)
         }

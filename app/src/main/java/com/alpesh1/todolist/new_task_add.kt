@@ -1,16 +1,25 @@
 package com.alpesh1.todolist
 
+import android.annotation.SuppressLint
+import android.app.AlarmManager
 import android.app.DatePickerDialog
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.PendingIntent
 import android.app.TimePickerDialog
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.DatePicker
 import android.widget.TimePicker
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.alpesh1.todolist.DataBase.DBHelper
 import com.alpesh1.todolist.ModelClass.TaskModel
 import com.alpesh1.todolist.databinding.ActivityNewTaskAddBinding
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 
 class new_task_add : AppCompatActivity() {
@@ -20,6 +29,10 @@ class new_task_add : AppCompatActivity() {
     lateinit var dbHelper: DBHelper
 
     lateinit var taskModel: TaskModel
+    lateinit var notificationManager: NotificationManager
+    lateinit var pendingIntent: PendingIntent
+    var CHANNEL_ID="my Channel"
+    var Notification_ID=100
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,9 +56,7 @@ class new_task_add : AppCompatActivity() {
                 DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
                     override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
 
-                        var Year = p1
-                        var Month = p2 + 1
-                        var Date = p3
+
 
                         var selectedDate = "$p3-${(p2 + 1)}-$p1"
                         binding.edtsetDate.setText(selectedDate)
@@ -56,7 +67,6 @@ class new_task_add : AppCompatActivity() {
         }
 
         binding.edtsetTime.setOnClickListener {
-
             var date = Date()
 
             var format2 = SimpleDateFormat("hh:mm a")
@@ -65,13 +75,15 @@ class new_task_add : AppCompatActivity() {
             binding.edtsetTime.setText(currentTime)
             var seleTime = currentTime
 
-            var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
-                override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
 
-                    var hour = p1
-                    var minute = p2
+
+
+            var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
+                override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int){
+
+
                     var selectedTime = "$p1:$p2"
-                    binding.edtsetTime.setText(seleTime)
+                    binding.edtsetTime.setText(selectedTime)
                 }
 
             }, 10, 0, true)
@@ -127,6 +139,12 @@ class new_task_add : AppCompatActivity() {
             binding.edtsetDate.setText("")
             binding.edtsetTime.setText("")
 
+
+
         }
+
     }
-}
+
+
+
+ }
