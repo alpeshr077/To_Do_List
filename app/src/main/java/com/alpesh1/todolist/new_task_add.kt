@@ -63,7 +63,7 @@ class new_task_add : AppCompatActivity() {
             var currentTime = format2.format(date)
 
             binding.edtsetTime.setText(currentTime)
-            var seleTime = currentTime
+            var selectTime = currentTime
 
             var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
                 override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
@@ -71,10 +71,10 @@ class new_task_add : AppCompatActivity() {
                     var hour = p1
                     var minute = p2
                     var selectedTime = "$p1:$p2"
-                    binding.edtsetTime.setText(seleTime)
+                    binding.edtsetTime.setText(selectTime)
                 }
 
-            }, 10, 0, true)
+            }, 12, 60, true)
             dialog1.show()
         }
 

@@ -37,6 +37,9 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
         var db = writableDatabase
         var values = ContentValues().apply {
             taskModel.apply {
+
+
+
                 put(ADDTASK,addtask)
                 put(DATE,date)
                 put(MONTH,month)
