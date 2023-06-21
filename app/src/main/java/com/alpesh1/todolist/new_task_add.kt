@@ -31,7 +31,8 @@ class new_task_add : AppCompatActivity() {
 
         binding.edtsetDate.setOnClickListener {
 
-            var date = Date()
+            var date =Date()
+
 
             var format1 = SimpleDateFormat("dd-MM-YYYY")
             var currentDate = format1.format(date)
@@ -39,13 +40,12 @@ class new_task_add : AppCompatActivity() {
             var dates = currentDate.split("-")
             binding.edtsetDate.setText(currentDate)
 
+
+
             var dialog =
                 DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
                     override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
 
-                        var year = p1
-                        var month = p2 + 1
-                        var date = p3
 
                         var selectedDate = "$p3-${(p2 + 1)}-$p1"
                         binding.edtsetDate.setText(selectedDate)
