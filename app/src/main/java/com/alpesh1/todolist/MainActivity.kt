@@ -14,7 +14,6 @@ import com.alpesh1.todolist.ModelClass.TaskModel
 import com.alpesh1.todolist.databinding.ActivityMainBinding
 import com.alpesh1.todolist.databinding.UpdateDataBinding
 
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding

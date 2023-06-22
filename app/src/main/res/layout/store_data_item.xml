@@ -20,6 +20,7 @@
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/iconColorStyle"
                 android:layout_marginLeft="@dimen/_10sdp" />
 
             <LinearLayout
@@ -33,6 +34,7 @@
                     android:id="@+id/setData"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TextColorStyle"
                     android:text="Data Submit"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp" />
@@ -41,6 +43,7 @@
                     android:id="@+id/setDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    style="@style/TextColorStyle"
                     android:text="10-01-2012"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
@@ -50,6 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10:25:AM"
+                    style="@style/TextColorStyle"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
 
@@ -61,6 +65,7 @@
                 android:layout_height="@dimen/_24sdp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_5sdp"
+                style="@style/iconColorStyle"
                 android:layout_marginRight="@dimen/_16sdp"
                 android:src="@drawable/baseline_star_border_24" />
 

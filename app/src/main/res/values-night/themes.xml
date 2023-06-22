@@ -5,4 +5,16 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <item name="android:statusBarColor">@color/black</item>
     </style>
+
+    <style name="TextColorStyle">
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="iconColorStyle">
+        <item name="android:tint">#ffffff</item>
+    </style>
+    <style name="statusColorStyle">
+        <item name="android:statusBarColor">#45A3DD</item>
+    </style>
+
 </resources>
