@@ -45,17 +45,12 @@ class new_task_add : AppCompatActivity() {
             var dialog =
                 DatePickerDialog(this, object : DatePickerDialog.OnDateSetListener {
                     override fun onDateSet(p0: DatePicker?, p1: Int, p2: Int, p3: Int) {
-
-
                         var selectedDate = "$p3-${(p2 + 1)}-$p1"
                         binding.edtsetDate.setText(selectedDate)
                     }
-
                 }, dates[2].toInt(), dates[1].toInt() - 1, dates[0].toInt())
             dialog.show()
         }
-
-
         binding.edtsetTime.setOnClickListener {
 
             var time = Date()

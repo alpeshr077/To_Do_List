@@ -8,9 +8,13 @@
 
     <style name="TextColorStyle">
         <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorHint">#fff</item>
     </style>
 
     <style name="iconColorStyle">
+        <item name="android:tint">#ffffff</item>
+    </style>
+    <style name="iconColor">
         <item name="android:tint">#ffffff</item>
     </style>
 

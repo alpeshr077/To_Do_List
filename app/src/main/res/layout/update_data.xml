@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                style="@style/iconColorStyle"
+                style="@style/iconColor"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:src="@drawable/baseline_calendar_month_24" />
         </RelativeLayout>
@@ -95,7 +95,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/_20sdp"
-                style="@style/iconColorStyle"
+                style="@style/iconColor"
                 android:src="@drawable/baseline_access_time_24" />
         </RelativeLayout>
 

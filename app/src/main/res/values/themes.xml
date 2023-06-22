@@ -20,7 +20,10 @@
     </style>
 
     <style name="iconColorStyle">
-        <item name="android:tint">#000000</item>
+        <item name="android:tint">#fff</item>
+    </style>
+    <style name="iconColor">
+        <item name="android:tint">#000</item>
     </style>
 
     <style name="BorderStyle">

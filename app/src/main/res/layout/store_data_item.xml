@@ -17,7 +17,7 @@
             android:layout_height="@dimen/_60sdp"
             android:orientation="horizontal"
             android:layout_gravity="center"
-            android:background="#45A3DD">
+            android:background="#45A3DD"
             style="@style/Store_DataStyle">
 
             <CheckBox

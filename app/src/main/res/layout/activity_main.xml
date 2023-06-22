@@ -19,28 +19,28 @@
             app:cardMaxElevation="@dimen/_12sdp">
 
             <LinearLayout
+                style="@style/Main_ActivityStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                android:layout_height="match_parent"
-                style="@style/Main_ActivityStyle">
 
                 <ImageView
+                    style="@style/iconColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_16sdp"
-                    style="@style/iconColorStyle"
                     android:layout_marginTop="@dimen/_16sdp"
                     android:src="@drawable/baseline_search_24" />
 
                 <EditText
+                    style="@style/TextColorStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_6sdp"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:layout_weight="1"
                     android:background="@null"
-                    style="@style/TextColorStyle"
-                    android:hint="Search Task" />
+                    android:hint="Search Task"
+                    android:textColorHint="@color/white" />
 
                 <ImageView
                     android:layout_width="wrap_content"
