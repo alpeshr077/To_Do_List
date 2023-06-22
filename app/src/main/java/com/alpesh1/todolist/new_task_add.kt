@@ -73,6 +73,7 @@ class new_task_add : AppCompatActivity() {
                     var minute = p2
                     var selectedTime = "$p1:$p2"
                     binding.edtsetTime.setText(selectTime)
+
                 }
 
             }, 12, 60, true)
