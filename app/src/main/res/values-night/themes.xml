@@ -13,8 +13,24 @@
     <style name="iconColorStyle">
         <item name="android:tint">#ffffff</item>
     </style>
-    <style name="statusColorStyle">
-        <item name="android:statusBarColor">#45A3DD</item>
+
+    <style name="BorderStyle">
+        <item name="android:background">@drawable/border</item>
+    </style>
+
+    <style name="Store_DataStyle">
+        <item name="android:background">#75A1D1</item>
+    </style>
+
+    <style name="Main_ActivityStyle">
+        <item name="android:background">#116AA3</item>
+    </style>
+    <style name="All_ActivityStyle">
+        <item name="android:background">#000000</item>
+    </style>
+
+    <style name="Add_Style">
+        <item name="android:background">@drawable/button_design_night</item>
     </style>
 
 </resources>

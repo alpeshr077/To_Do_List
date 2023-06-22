@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_16sdp"
-        android:background="@drawable/sort_border"
+        style="@style/BorderStyle"
         android:orientation="vertical">
 
         <TextView

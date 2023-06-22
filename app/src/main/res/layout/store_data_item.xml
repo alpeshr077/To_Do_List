@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_60sdp"
             android:orientation="horizontal"
-            android:background="#E9F0F8">
+            style="@style/Store_DataStyle">
 
             <RadioButton
                 android:id="@+id/checkBox"
@@ -36,7 +36,6 @@
                     android:layout_height="wrap_content"
                     style="@style/TextColorStyle"
                     android:text="Data Submit"
-                    android:textColor="@color/black"
                     android:textSize="@dimen/_14sdp" />
 
                 <TextView
@@ -45,7 +44,6 @@
                     android:layout_height="wrap_content"
                     style="@style/TextColorStyle"
                     android:text="10-01-2012"
-                    android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
 
                 <TextView
@@ -54,7 +52,6 @@
                     android:layout_height="wrap_content"
                     android:text="10:25:AM"
                     style="@style/TextColorStyle"
-                    android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
 
             </LinearLayout>
