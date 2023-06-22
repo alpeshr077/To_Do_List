@@ -40,12 +40,9 @@ class TaskAdapter(update:(TaskModel) -> Unit,delete:(Int) -> Unit) : RecyclerVie
     override fun onBindViewHolder(holder: TaskHolder, @SuppressLint("RecyclerView") position: Int) {
        holder.binding.apply {
            tasklist.get(position).apply {
-               setData.text = addtask
+               setTask.text = addtask
                setDate.text = date
-               setDate.text = month
-               setDate.text = year
-               setTime.text = minute
-               setTime.text = hour
+               setTime.text = time
            }
        }
 
@@ -74,7 +71,7 @@ class TaskAdapter(update:(TaskModel) -> Unit,delete:(Int) -> Unit) : RecyclerVie
 
                 popupMenu.show()
 
-                return true
+                return false
 
             }
 

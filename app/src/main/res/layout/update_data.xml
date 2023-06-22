@@ -21,7 +21,7 @@
             android:ems="20"/>
 
         <EditText
-            android:id="@+id/addtask"
+            android:id="@+id/addtaskupdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_16sdp"
@@ -44,7 +44,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/edtsetDate"
+                android:id="@+id/edtsetDateupdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_16sdp"
@@ -71,7 +71,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/edtsetTime"
+                android:id="@+id/edtsetTimeupdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
@@ -114,7 +114,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnSubmitupdate"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_gravity="center"

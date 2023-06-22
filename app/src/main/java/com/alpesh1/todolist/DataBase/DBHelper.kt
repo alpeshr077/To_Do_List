@@ -2,7 +2,6 @@ package com.alpesh1.todolist.DataBase
 
 import android.content.ContentValues
 import android.content.Context
-import android.content.LocusId
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.alpesh1.todolist.ModelClass.TaskModel
@@ -13,16 +12,12 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
     var ID = "id"
     var ADDTASK = "addtask"
     var DATE = "date"
-    var MONTH = "month"
-    var YEAR = "year"
-    var TIME = "time"
-    var MINUTE = "minute"
-    var HOUR = "hour"
+    var Time = "time"
 
 
     override fun onCreate(p0: SQLiteDatabase?) {
 
-        var que = "CREATE TABLE $TABLE_NAME($ID INTEGER PRIMARY KEY AUTOINCREMENT,$ADDTASK TEXT,$DATE TEXT, $MONTH TEXT, $YEAR TEXT,$MINUTE TEXT,$HOUR TEXT)"
+        var que = "CREATE TABLE $TABLE_NAME($ID INTEGER PRIMARY KEY AUTOINCREMENT,$ADDTASK TEXT,$DATE DATE,$Time TIME)"
 
         p0?.execSQL(que)
 
@@ -37,15 +32,9 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
         var db = writableDatabase
         var values = ContentValues().apply {
             taskModel.apply {
-
-
-
                 put(ADDTASK,addtask)
                 put(DATE,date)
-                put(MONTH,month)
-                put(YEAR,year)
-                put(MINUTE,minute)
-                put(HOUR,hour)
+                put(Time,time)
 
             }
         }
@@ -63,12 +52,9 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
             var id = cursor.getInt(0)
             var addtask = cursor.getString(1)
             var date = cursor.getInt(2)
-            var month = cursor.getInt(3)
-            var year = cursor.getInt(4)
-            var minute = cursor.getInt(5)
-            var hour = cursor.getInt(6)
+            var time = cursor.getInt(3)
 
-            var model = TaskModel(id,addtask, date.toString(), month.toString(), year.toString(),minute.toString(),hour.toString())
+            var model = TaskModel(id, addtask, date.toString(), time.toString())
 
             tasklist.add(model)
             cursor.moveToNext()
@@ -83,10 +69,7 @@ class DBHelper(context: Context?) : SQLiteOpenHelper(context, "Database", null, 
             taskModel.apply {
                 put(ADDTASK,addtask)
                 put(DATE,date)
-                put(MONTH,month)
-                put(YEAR,year)
-                put(MINUTE,minute)
-                put(HOUR,hour)
+                put(Time,time)
             }
         }
         db.update(TABLE_NAME,values,"id=${taskModel.id}",null)

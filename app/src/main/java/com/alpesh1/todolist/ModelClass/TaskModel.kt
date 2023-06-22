@@ -4,27 +4,18 @@ class TaskModel {
 
     var id = 0
     var addtask = ""
-    var date = ""
-    var month = ""
-    var year = ""
-    var minute = ""
-    var hour = ""
+    var date = "DD-MM-YYYY"
+    var time = "HOUSE:MINUTE"
 
     constructor(
         id: Int,
         addtask: String,
         date: String,
-        month: String,
-        year: String,
-        minute: String,
-        hour: String
+        time: String
     ) {
         this.id = id
         this.addtask = addtask
         this.date = date
-        this.month = month
-        this.year = year
-        this.minute = minute
-        this.hour = hour
+        this.time = time
     }
 }

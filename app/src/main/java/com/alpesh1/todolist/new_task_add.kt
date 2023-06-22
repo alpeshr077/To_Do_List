@@ -1,12 +1,7 @@
 package com.alpesh1.todolist
 
-import android.annotation.SuppressLint
-import android.app.AlarmManager
+
 import android.app.DatePickerDialog
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.app.PendingIntent
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
@@ -25,8 +20,6 @@ class new_task_add : AppCompatActivity() {
 
     lateinit var dbHelper: DBHelper
 
-    lateinit var taskModel: TaskModel
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +28,6 @@ class new_task_add : AppCompatActivity() {
 
         dbHelper = DBHelper(this)
 
-        binding.edtsetDate.setOnClickListener {
 
             var date =Date()
 
@@ -44,6 +36,8 @@ class new_task_add : AppCompatActivity() {
             var currentDate = format1.format(date)
 
             var dates = currentDate.split("-")
+          binding.edtsetDate.setOnClickListener {
+
             binding.edtsetDate.setText(currentDate)
 
 
@@ -61,15 +55,16 @@ class new_task_add : AppCompatActivity() {
             dialog.show()
         }
 
+
         binding.edtsetTime.setOnClickListener {
 
-            var date = Date()
+            var time = Date()
 
             var format2 = SimpleDateFormat("hh:mm a")
-            var currentTime = format2.format(date)
+            var currentTime = format2.format(time)
+            var selectTime = currentTime
 
             binding.edtsetTime.setText(currentTime)
-            var selectTime = currentTime
 
             var dialog1 = TimePickerDialog(this, object : TimePickerDialog.OnTimeSetListener {
                 override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
@@ -117,15 +112,11 @@ class new_task_add : AppCompatActivity() {
 
         }
         binding.btnSubmit.setOnClickListener {
-
             var addtask = binding.addtask.text.toString()
             var date = binding.edtsetDate.text.toString()
-            var month = binding.edtsetDate.text.toString()
-            var year = binding.edtsetDate.text.toString()
-            var minute = binding.edtsetTime.text.toString()
-            var hour = binding.edtsetTime.text.toString()
+            var time = binding.edtsetTime.text.toString()
 
-            val model = TaskModel(1, addtask, date, month, year, minute, hour)
+            val model = TaskModel(1, addtask, date,time)
 
             dbHelper.addTask(model)
 
