@@ -20,7 +20,6 @@ import com.alpesh1.todolist.databinding.UpdateDataBinding
 import java.text.SimpleDateFormat
 import java.util.Date
 
-
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
