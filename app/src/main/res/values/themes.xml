@@ -29,6 +29,9 @@
     <style name="BorderStyle">
         <item name="android:background">@drawable/sort_border</item>
     </style>
+    <style name="loginBorder">
+        <item name="android:background">@drawable/loginborder</item>
+    </style>
 
     <style name="Store_DataStyle">
         <item name="android:background">#E9F0F8</item>
@@ -43,6 +46,9 @@
     </style>
     <style name="Add_Style">
         <item name="android:background">@drawable/button_design</item>
+    </style>
+    <style name="login">
+        <item name="android:background">@drawable/login</item>
     </style>
 
 </resources>
