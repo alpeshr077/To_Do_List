@@ -45,6 +45,7 @@
 
     <style name="Email_Style">
         <item name="android:textColorHint">#FFFFFF</item>
+        <item name="android:textColor">#BFBDBD</item>
     </style>
 
 

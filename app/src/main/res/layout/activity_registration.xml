@@ -62,7 +62,6 @@
             android:padding="@dimen/_10sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="Email"
-            android:textColor="#7E7D7D"
             android:textSize="@dimen/_16sdp" />
 
         <ImageView
@@ -93,7 +92,6 @@
             android:padding="@dimen/_10sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="Name"
-            android:textColor="#7E7D7D"
             android:textSize="@dimen/_16sdp" />
 
         <ImageView
@@ -126,7 +124,7 @@
             android:padding="@dimen/_10sdp"
             android:paddingLeft="@dimen/_16sdp"
             android:text="Password"
-            android:textColor="#7E7D7D"
+
             android:textSize="@dimen/_16sdp" />
 
         <ImageView
