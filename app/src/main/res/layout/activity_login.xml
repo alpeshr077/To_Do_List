@@ -14,7 +14,6 @@
         android:gravity="center"
         android:paddingTop="@dimen/_40sdp"
         android:text="Login"
-        android:textColor="@color/black"
         android:textSize="@dimen/_25sdp"
         android:textStyle="bold" />
 
@@ -22,13 +21,15 @@
         style="@style/BorderStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
         android:inputType="text"
         android:gravity="center|left"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:padding="@dimen/_10sdp"
         android:paddingLeft="@dimen/_16sdp"
         android:hint="Email"
-        android:textColor="#7E7D7D"
         android:textSize="@dimen/_16sdp" />
 
     <RelativeLayout
@@ -50,6 +51,7 @@
             android:hint="Password"
             android:textColor="#7E7D7D"
             android:textSize="@dimen/_16sdp" />
+
 
         <ImageView
             android:layout_width="@dimen/_24sdp"

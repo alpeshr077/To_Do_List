@@ -19,15 +19,21 @@
         <item name="android:textColor">#000000</item>
     </style>
 
+    <style name="TextColor2Style">
+        <item name="android:textColor">#636363</item>
+    </style>
+
     <style name="iconColorStyle">
         <item name="android:tint">#fff</item>
     </style>
+
     <style name="iconColor">
         <item name="android:tint">#000</item>
     </style>
 
     <style name="BorderStyle">
         <item name="android:background">@drawable/sort_border</item>
+        <item name="android:textColor">#636363</item>
     </style>
     <style name="loginBorder">
         <item name="android:background">@drawable/loginborder</item>
@@ -44,11 +50,16 @@
     <style name="All_ActivityStyle">
         <item name="android:background">#FFFFFF</item>
     </style>
+
     <style name="Add_Style">
         <item name="android:background">@drawable/button_design</item>
     </style>
     <style name="login">
         <item name="android:background">@drawable/login</item>
+    </style>
+
+    <style name="Email_Style">
+        <item name="android:background">#494545</item>
     </style>
 
 </resources>
