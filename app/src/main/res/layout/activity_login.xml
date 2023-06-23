@@ -64,4 +64,17 @@
         android:textColor="#3E8CCF"/>
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp"
+        style="@style/Add_Style"
+        android:paddingLeft="@dimen/_16sdp"
+        android:textSize="@dimen/_16sdp"
+         android:textColor="#fff"/>
+
+
 </LinearLayout>
