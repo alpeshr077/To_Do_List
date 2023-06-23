@@ -21,6 +21,7 @@
 
     <style name="BorderStyle">
         <item name="android:background">@drawable/border</item>
+        <item name="android:textColor">#E5EEF8</item>
     </style>
 
     <style name="Store_DataStyle">
@@ -46,6 +47,11 @@
     <style name="Email_Style">
         <item name="android:textColorHint">#FFFFFF</item>
         <item name="android:textColor">#BFBDBD</item>
+    </style>
+
+    <style name="login">
+        <item name="android:background">@drawable/button_design_night</item>
+        <item name="android:textColor">#ffffff</item>
     </style>
 
 

@@ -33,10 +33,11 @@
 
     <style name="BorderStyle">
         <item name="android:background">@drawable/sort_border</item>
-        <item name="android:textColor">#636363</item>
+        <item name="android:textColor">#000000</item>
     </style>
     <style name="loginBorder">
         <item name="android:background">@drawable/loginborder</item>
+        <item name="android:textColor">#E9F0F8</item>
     </style>
 
     <style name="Store_DataStyle">
@@ -55,7 +56,8 @@
         <item name="android:background">@drawable/button_design</item>
     </style>
     <style name="login">
-        <item name="android:background">@drawable/login</item>
+        <item name="android:background">@drawable/button_design</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
     <style name="Email_Style">

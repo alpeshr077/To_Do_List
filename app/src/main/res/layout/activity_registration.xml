@@ -170,7 +170,7 @@
 
     </LinearLayout>
 
-    <EditText
+    <TextView
         style="@style/Add_Style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
