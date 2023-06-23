@@ -18,6 +18,7 @@
         android:textStyle="bold" />
 
     <EditText
+        style="@style/BorderStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content">
 
         <EditText
+            style="@style/BorderStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
