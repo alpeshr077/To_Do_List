@@ -14,6 +14,7 @@
     <style name="iconColorStyle">
         <item name="android:tint">#ffffff</item>
     </style>
+
     <style name="iconColor">
         <item name="android:tint">#ffffff</item>
     </style>
@@ -29,6 +30,7 @@
     <style name="Main_ActivityStyle">
         <item name="android:background">#116AA3</item>
     </style>
+
     <style name="All_ActivityStyle">
         <item name="android:background">#000000</item>
     </style>
@@ -36,5 +38,14 @@
     <style name="Add_Style">
         <item name="android:background">@drawable/button_design_night</item>
     </style>
+
+    <style name="TextColor2Style">
+        <item name="android:textColor">#BFBDBD</item>
+    </style>
+
+    <style name="Email_Style">
+        <item name="android:textColorHint">#FFFFFF</item>
+    </style>
+
 
 </resources>
