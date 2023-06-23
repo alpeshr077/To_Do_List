@@ -16,14 +16,14 @@
             android:name=".Registration_Activity"
             android:exported="false" />
         <activity
-            android:name=".Login_Activity"
+             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".new_task_add"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login_Activity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
